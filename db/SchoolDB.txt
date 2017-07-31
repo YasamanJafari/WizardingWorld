@@ -1,0 +1,72 @@
+Hogwarts
+4
+Gryffindor
+Hufflepuff
+Ravenclaw
+Slytherin
+2
+Flying
+Potions
+3
+Nevile Longbottom
+Luna Lovegood
+Lavender Brown
+2
+Minerva McGonagol
+Severus Snape
+*
+Ilvermorny School of Witchcraft and Wizardry
+4
+Thunderbird
+Wampus
+Horned Serpent
+Pukwudgie
+4
+Defence Against the Dark Arts 
+Charms
+Transfiguration
+Potions
+3
+Seraphina Picquery
+Porpentina Scamander
+Queenie Goldstein
+2
+Isolt Sayre 
+James Steward
+*
+Beauxbatons Academy of Magic
+0
+2
+Defence Against the Dark Arts
+Potions
+2
+Fleur Delacour
+Gabrielle Delacour
+1
+Olympe Maxime
+*
+Durmstrang Institute
+0
+3
+Defence Against the Dark Arts
+Transfiguration
+Charms
+2
+Gellert Grindelwald
+Viktor Krum
+1
+Harfang Munter
+*
+Castelobruxo
+0
+3
+Transfiguration
+Alchemy
+Herbology
+2
+Libatius Borage
+Joao Coelho
+1
+Benedita Dourado
+$
+

@@ -1,0 +1,33 @@
+Ravenclaw
+Hogwarts
+2
+Luna Lovegood
+Cho Chang
+*
+Gryffindor
+Hogwarts
+6
+Harry Potter
+Hermione Granger
+Ronald Weasley
+Ginny Weasley
+Fred Weasley
+George Weasley
+*
+Hufflepuff
+Hogwarts
+2
+Cedric Diggory
+Nymphadora Tonks
+*
+Slytherin
+Hogwarts
+2
+Draco Malfoy
+Tom Riddle
+*
+Horned Serpent
+Ilvermorny School of Witchcraft and Wizardry
+1
+Seraphina Picquery
+$

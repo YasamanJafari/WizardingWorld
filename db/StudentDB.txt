@@ -1,0 +1,43 @@
+Harry Potter
+Hogwarts
+Gryffindor
+PURE_BLOOD
+31/07/1980
+*
+Hermione Granger
+Hogwarts
+Gryffindor
+MUGGLE_BORN
+19/09/1979
+*
+Ronald Weasley
+Hogwarts
+Gryffindor
+PURE_BLOOD
+01/03/1980
+*
+Draco Malfoy
+Hogwarts
+Slytherin
+PURE_BLOOD
+05/06/1980
+*
+Ginny Weasley
+Hogwarts
+Gryffindor
+PURE_BLOOD
+11/08/1981
+*
+Luna Lovegood
+Hogwarts
+Ravenclaw
+PURE_BLOOD
+13/02/1980
+*
+Cedric Diggory
+Hogwarts
+Hufflepuff
+PURE_BLOOD
+03/08/1977
+$
+

@@ -1,0 +1,35 @@
+Minerva Mcgonagall
+Gryffindor
+HALF_BLOOD
+Hogwarts
+04/10/1906
+Professor
+*
+Fred Weasley
+Gryffindor
+PURE_BLOOD
+Hogwarts
+01/04/1978
+Student
+*
+Severus Snape
+Slytherin
+HALF_BLOOD
+Hogwarts
+09/01/1960
+Professor
+*
+George Weasley
+Gryffindor
+PURE_BLOOD
+Hogwarts
+01/04/1978
+Student
+*
+Percy Weasley
+Gryffindor
+PURE_BLOOD
+Hogwarts
+22/08/1973
+Student
+$
