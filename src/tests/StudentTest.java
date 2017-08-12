@@ -8,6 +8,7 @@ import org.junit.Test;
 import entities.Course;
 import entities.FinishedCourse;
 import entities.Grades;
+import entities.Professor;
 import entities.Student;
 
 public class StudentTest {
@@ -16,7 +17,8 @@ public class StudentTest {
 	@Test
 	public void getCoursesTest() {
 		Vector <Course> courses = new Vector<Course>();
-	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    Professor snape = new Professor("Extremely skilled at potions and Occlumency.");
+	    Course potions = new Course("potions", snape, Grades.A, 1995);
 	    courses.add(potions);
 		harry = new Student(courses);
 		Vector<Course> actual = harry.getCourses();
@@ -29,9 +31,10 @@ public class StudentTest {
 	public void getReportCardTest() {
 		Vector <Course> courses = new Vector<Course>();
 		Vector <FinishedCourse> finishedCourses = new Vector<FinishedCourse>();
-	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    Professor snape = new Professor("Extremely skilled at potions and Occlumency.");
+	    Course potions = new Course("potions", snape, Grades.A, 1995);
 	    //	public FinishedCourse(Grades grade, boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
-	    FinishedCourse flying = new FinishedCourse(Grades.O, true, "flying", "Madame Hooch", 'A', 1996, null);
+	    FinishedCourse flying = new FinishedCourse(Grades.O, true, "flying", null, Grades.O, 1996, null);
 	    finishedCourses.add(flying);
 	    courses.add(potions);
 	    
@@ -46,7 +49,7 @@ public class StudentTest {
 	public void setReportCardTest() {
 		Vector <FinishedCourse> finishedCourses = new Vector<FinishedCourse>();
 	    //	public FinishedCourse(Grades grade, boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
-	    FinishedCourse flying = new FinishedCourse(Grades.O, true, "flying", "Madame Hooch", 'A', 1996, null);
+	    FinishedCourse flying = new FinishedCourse(Grades.O, true, "flying", null, Grades.O, 1996, null);
 	    finishedCourses.add(flying);
 	    
 		harry = new Student();
@@ -60,7 +63,8 @@ public class StudentTest {
 	@Test
 	public void setCoursesTest() {
 		Vector <Course> courses = new Vector<Course>();
-	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    Professor snape = new Professor("Extremely skilled at potions and Occlumency.");
+	    Course potions = new Course("potions", snape, Grades.A, 1995);
 	    //	public FinishedCourse(Grades grade, boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
 	    courses.add(potions);
 	    

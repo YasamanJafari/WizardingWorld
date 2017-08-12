@@ -7,34 +7,34 @@ public class FinishedCourse extends Course{
 	private boolean _passed; //whether or not the student passed the course
 	
 	//constructors
-	public FinishedCourse(Grades grade, boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	public FinishedCourse(Grades grade, boolean passed, String name, Professor professorName, Grades minGrade, int year, Vector<Student> studentNames){
 		super(name, professorName, minGrade, year, studentNames);
 		_grade = grade;
 		_passed = passed;
 	}
-	public FinishedCourse(boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	public FinishedCourse(boolean passed, String name, Professor professorName, Grades minGrade, int year, Vector<Student> studentNames){
 		//Grade not given
 		this(null, passed, name, professorName, minGrade, year, studentNames);
 	}
-	public FinishedCourse(Grades grade, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	public FinishedCourse(Grades grade, String name, Professor professorName, Grades minGrade, int year, Vector<Student> studentNames){
 		//passed boolean not given
 		this(grade, false, name, professorName, minGrade, year, studentNames);
 	}
-	public FinishedCourse(String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	public FinishedCourse(String name, Professor professorName, Grades minGrade, int year, Vector<Student> studentNames){
 		//passed boolean and grade not given
 		this(null, false, name, professorName, minGrade, year, studentNames);
 	}
 	public FinishedCourse(){
 		//nothing given
-		this(null, false, "", "", '0', 0, null);
+		this(null, false, "", null, null, 0, null);
 	}
 	public FinishedCourse(Grades grade){
 		//only grade given
-		this(grade, false, "", "", '0', 0, null);
+		this(grade, false, "", null, null, 0, null);
 	}
 	public FinishedCourse(boolean passed){
 		//only passed given
-		this(null, passed, "", "", '0', 0, null);
+		this(null, passed, "", null, null, 0, null);
 	}
 	
 	//getters

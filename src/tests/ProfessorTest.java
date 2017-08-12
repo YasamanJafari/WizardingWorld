@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import entities.Course;
+import entities.Grades;
 import entities.Professor;
 
 public class ProfessorTest {
@@ -26,7 +27,8 @@ public class ProfessorTest {
 	public void getCoursesTest() {
 		//public Professor(Map<Integer, Course> courses, String notes, String name, String houseName, String bloodStatus, String school, Date birthday)  
 	    Map<Integer, Course> courseMap = new HashMap<Integer, Course>(); 
-	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    Professor snape = new Professor("Extremely skilled at potions and Occlumency.");
+	    Course potions = new Course("potions", snape, Grades.A, 1995);
 	    courseMap.put(1995, potions);
 		snape = new Professor(courseMap);
 		Map<Integer, Course> actual = snape.getCourses();
@@ -38,7 +40,9 @@ public class ProfessorTest {
 	@Test
 	public void setCoursesTest() {
 	    Map<Integer, Course> courseMap = new HashMap<Integer, Course>(); 
-	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    
+	    Professor snape = new Professor("Extremely skilled at potions and Occlumency.");
+	    Course potions = new Course("potions", snape, Grades.A, 1995);
 	    courseMap.put(1995, potions);
 		snape = new Professor();
 		snape.setCourses(courseMap);

@@ -4,43 +4,43 @@ import java.util.*;
 public class Course {
 	//fields
 	private String _name;
-	private String _professorName;
-	private char _minGrade;
+	private Professor _professorName;
+	private Grades _minGrade;
 	private int _year;
-	private Vector<String> _studentNames;
+	private Vector<Student> _studentNames;
 	
 	//constructors
-	public Course(String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	public Course(String name, Professor professorName, Grades minGrade, int year, Vector<Student> studentNames){
 		_name = name;
 		_professorName = professorName;
 		_minGrade = minGrade;
 		_year = year;
 		_studentNames = studentNames;
 	}
-	public Course(String name, String professorName, char minGrade, int year){
+	public Course(String name, Professor professorName, Grades minGrade, int year){
 		this(name, professorName, minGrade, year, null);
 	}
 	public Course(String name){
-		this(name, "", '0', 0, null);
+		this(name, null, null, 0, null);
 	}
 	public Course(){
-		this("", "", '0', 0, null);
+		this("", null, null, 0, null);
 	}
 	
 	//getters
 	public String getName(){
 		return _name;
 	}
-	public String getProfessorName(){
+	public Professor getProfessorName(){
 		return _professorName;
 	}
-	public char getMinGrade(){
+	public Grades getMinGrade(){
 		return _minGrade;
 	}
 	public int getYear(){
 		return _year;
 	}
-	public Vector<String> getStudentNames(){
+	public Vector<Student> getStudentNames(){
 		return _studentNames;
 	}
 	
@@ -48,16 +48,16 @@ public class Course {
 	public void setName(String name){
 		_name = name;
 	}
-	public void setProfessorName(String professorName){
+	public void setProfessorName(Professor professorName){
 		_professorName = professorName;
 	}
-	public void setMinGrade(char minGrade){
+	public void setMinGrade(Grades minGrade){
 		_minGrade = minGrade;
 	}
 	public void setYear(int year){
 		_year = year;
 	}
-	public void setStudentNames(Vector<String> studentNames){
+	public void setStudentNames(Vector<Student> studentNames){
 		_studentNames = studentNames;
 	}
 }
