@@ -51,4 +51,14 @@ public class ProfessorTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setNotesTest() {
+		snape = new Professor();
+		snape.setNotes("Extremely skilled at potions and Occlumency.");
+		String actual = snape.getNotes();
+		String expected = "Extremely skilled at potions and Occlumency.";
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
