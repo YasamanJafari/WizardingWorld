@@ -36,6 +36,10 @@ public class Professor extends Person{
 		//parent's fields are not given 
 		this(courses, notes, "", "", "", "", null);
 	}
+	public Professor(Map<Integer, Course> courses, String notes, String name){
+		//parent's fields are not given except name
+		this(courses, notes, name, "", "", "", null);
+	}
 	public Professor(){
 		//nothing is given!!
 		this(null, "", "", "", "", "", null);
