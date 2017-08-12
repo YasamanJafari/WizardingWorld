@@ -38,4 +38,17 @@ public class ProfessorTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setCoursesTest() {
+	    Map<Integer, Course> courseMap = new HashMap<Integer, Course>(); 
+	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    courseMap.put(1995, potions);
+		snape = new Professor();
+		snape.setCourses(courseMap);
+		Map<Integer, Course> actual = snape.getCourses();
+		Map<Integer, Course> expected = courseMap;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
