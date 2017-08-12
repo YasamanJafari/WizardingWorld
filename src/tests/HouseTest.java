@@ -8,7 +8,6 @@ import java.util.Vector;
 import org.junit.Assert;
 import org.junit.Test;
 
-import entities.Course;
 import entities.House;
 import entities.Professor;
 import entities.School;
