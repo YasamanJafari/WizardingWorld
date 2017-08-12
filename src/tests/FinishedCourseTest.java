@@ -9,6 +9,7 @@ import org.junit.Test;
 import entities.Course;
 import entities.FinishedCourse;
 import entities.Grades;
+import entities.Professor;
 
 public class FinishedCourseTest {
 	FinishedCourse flying;
@@ -30,4 +31,15 @@ public class FinishedCourseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setPassedTest() {
+		flying = new FinishedCourse();
+		flying.setPassed(true);
+		boolean actual = flying.getPassed();
+		boolean expected = true;
+		
+		Assert.assertEquals(expected, actual);
+	}
+	
 }
