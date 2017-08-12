@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import entities.Course;
 import entities.FinishedCourse;
+import entities.Grades;
 
 public class FinishedCourseTest {
 	FinishedCourse flying;
@@ -21,4 +22,12 @@ public class FinishedCourseTest {
 		Assert.assertEquals(expected, actual);
 	}
 
+	@Test
+	public void getGradesTest() {
+		flying = new FinishedCourse(Grades.O);
+		Grades actual = flying.getGrade();
+		Grades expected = Grades.O;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
