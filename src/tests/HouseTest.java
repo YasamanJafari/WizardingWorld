@@ -209,4 +209,19 @@ public class HouseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setPrefectsTest() {
+		//public House(String name, School school, Vector<Student> students, Professor headTeacher, ArrayList<String> qualities, Map<Integer, Student> prefects);
+		gryffindor = new House();
+	    Map<Integer, Student> prefectsMap = new HashMap<Integer, Student>(); 
+	    Student prefect = new Student("Someone");
+	    prefectsMap.put(1986, prefect);
+		
+		gryffindor.setPrefects(prefectsMap);
+		Map<Integer, Student> actual = gryffindor.getPrefects();
+		Map<Integer, Student> expected = prefectsMap;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
