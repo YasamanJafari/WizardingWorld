@@ -195,4 +195,18 @@ public class HouseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setQualitiesTest() {
+		//public House(String name, School school, Vector<Student> students, Professor headTeacher, ArrayList<String> qualities, Map<Integer, Student> prefects);
+		gryffindor = new House();
+		ArrayList<String> qualities = new ArrayList<String>();
+		qualities.add("Courage");
+		
+		gryffindor.setQualities(qualities);
+		ArrayList<String> actual = gryffindor.getQualities();
+		ArrayList<String> expected = qualities;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
