@@ -167,4 +167,19 @@ public class HouseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setStudentsTest() {
+		//public House(String name, School school, Vector<Student> students, Professor headTeacher, ArrayList<String> qualities, Map<Integer, Student> prefects);
+		gryffindor = new House();
+		Vector<Student> students = new Vector<Student>();
+		Student harry = new Student("Harry Potter");
+		students.add(harry);
+		
+		gryffindor.setStudents(students);
+		Vector<Student> actual = gryffindor.getStudents();
+		Vector<Student> expected = students;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
