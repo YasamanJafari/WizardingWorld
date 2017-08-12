@@ -5,9 +5,11 @@ public class School {
 	//NOTE: fields are added according to the test case file.
 	private String _name;
 	private ArrayList<String> _houseNames;
+	//if _houseNames is null, then the school is not housed
 	private ArrayList<String> _courseNames;
 	private ArrayList<Integer> _years;
 	private Vector<String> _studentNames;
+	//the number of students in each school is the size of the studentNames vector
 	private Vector<String> _professorNames;
 	
 	//constructors
