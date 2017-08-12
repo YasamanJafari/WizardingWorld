@@ -40,6 +40,10 @@ public class Professor extends Person{
 		//parent's fields are not given except name
 		this(courses, notes, name, "", "", "", null);
 	}
+	public Professor(String name, String notes){
+		//only name and notes are given
+		this(null, notes, name, "", "", "", null);
+	}
 	public Professor(){
 		//nothing is given!!
 		this(null, "", "", "", "", "", null);

@@ -35,6 +35,10 @@ public class Student extends Person{
 		//parent's fields are not given except name
 		this(courses, reportCard, name, "", "", "", null);
 	}
+	public Student(String name){
+		//only name is given
+		this(null, null, name, "", "", "", null);
+	}
 	public Student(){
 		//nothing is given!!
 		this(null, null, "", "", "", "", null);
