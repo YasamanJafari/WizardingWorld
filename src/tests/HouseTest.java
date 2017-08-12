@@ -142,4 +142,16 @@ public class HouseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setNameTest() {
+		//public House(String name, School school, Vector<Student> students, Professor headTeacher, ArrayList<String> qualities, Map<Integer, Student> prefects);
+		gryffindor = new House();
+		
+		gryffindor.setName("Gryffindor");
+		String actual = gryffindor.getName();
+		String expected = "Gryffindor";
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
