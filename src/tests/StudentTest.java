@@ -56,4 +56,19 @@ public class StudentTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setCoursesTest() {
+		Vector <Course> courses = new Vector<Course>();
+	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    //	public FinishedCourse(Grades grade, boolean passed, String name, String professorName, char minGrade, int year, Vector<String> studentNames){
+	    courses.add(potions);
+	    
+		harry = new Student();
+		harry.setCourses(courses);
+		Vector<Course> actual = harry.getCourses();
+		Vector<Course> expected = courses;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
