@@ -182,4 +182,17 @@ public class HouseTest {
 		
 		Assert.assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void setHeadTeacherTest() {
+		//public House(String name, School school, Vector<Student> students, Professor headTeacher, ArrayList<String> qualities, Map<Integer, Student> prefects);
+		gryffindor = new House();
+		Professor mcGonagall = new Professor("Minerva McGonagall", "Animagus (distinctively marked silver tabby cat).");
+		
+		gryffindor.setHeadTeacher(mcGonagall);
+		Professor actual = gryffindor.getHeadTeacher();
+		Professor expected = mcGonagall;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
