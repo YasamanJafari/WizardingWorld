@@ -51,7 +51,7 @@ public class Student extends Person{
 	}
 	
 	//setters
-	public void setNotes(Vector<FinishedCourse> reportCard){
+	public void setReportCard(Vector<FinishedCourse> reportCard){
 		//set the reportCard field
 		_reportCard = reportCard;
 	}

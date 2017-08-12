@@ -1,15 +1,10 @@
 package tests;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-import entities.Course;
 import entities.FinishedCourse;
 import entities.Grades;
-import entities.Professor;
 
 public class FinishedCourseTest {
 	FinishedCourse flying;
