@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Assert;
@@ -21,6 +22,19 @@ public class ProfessorTest {
 		snape = new Professor("Extremely skilled at potions and Occlumency.");
 		String actual = snape.getNotes();
 		String expected = "Extremely skilled at potions and Occlumency.";
+		
+		Assert.assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void getCoursesTest() {
+		//public Professor(Map<Integer, Course> courses, String notes, String name, String houseName, String bloodStatus, String school, Date birthday)  
+	    Map<Integer, Course> courseMap = new HashMap<Integer, Course>(); 
+	    Course potions = new Course("potions", "Severus Snape", 'C', 1995);
+	    courseMap.put(1995, potions);
+		snape = new Professor(courseMap);
+		Map<Integer, Course> actual = snape.getCourses();
+		Map<Integer, Course> expected = courseMap;
 		
 		Assert.assertEquals(expected, actual);
 	}
