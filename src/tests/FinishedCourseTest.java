@@ -42,4 +42,13 @@ public class FinishedCourseTest {
 		Assert.assertEquals(expected, actual);
 	}
 	
+	@Test
+	public void setGradeTest() {
+		flying = new FinishedCourse();
+		flying.setGrade(Grades.P);
+		Grades actual = flying.getGrade();
+		Grades expected = Grades.P;
+		
+		Assert.assertEquals(expected, actual);
+	}
 }
