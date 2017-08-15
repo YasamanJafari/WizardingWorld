@@ -7,10 +7,10 @@ import service.SchoolService;
 public class SchoolServiceTest {
 	public boolean getSchoolTest(){
 		School hogwarts = new School("Hogwarts");
-		School actual = hogwarts;
+		School expected = hogwarts;
 		
 		SchoolService hogwartsService = new SchoolService(hogwarts);
-		School expected = hogwartsService.getSchool();
+		School actual = hogwartsService.getSchool();
 		
 		if(actual.equals(expected))
 			return true;
@@ -19,11 +19,11 @@ public class SchoolServiceTest {
 	
 	public boolean setSchoolTest(){
 		School hogwarts = new School("Hogwarts");
-		School actual = hogwarts;
+		School expected = hogwarts;
 		
 		SchoolService hogwartsService = new SchoolService();
 		hogwartsService.setSchool(hogwarts);
-		School expected = hogwartsService.getSchool();
+		School actual = hogwartsService.getSchool();
 		
 		if(actual.equals(expected))
 			return true;
@@ -32,10 +32,10 @@ public class SchoolServiceTest {
 	
 	public boolean sortingHatTest(){
 		Student harry = new Student("Harry Potter");
-		String actual = "Gryffindor";
+		String expected = "Gryffindor";
 		
 		SchoolService hogwartsService = new SchoolService();
-		String expected = hogwartsService.sortingHat(harry).getName();
+		String actual = hogwartsService.sortingHat(harry).getName();
 		
 		if(actual.equals(expected))
 			return true;

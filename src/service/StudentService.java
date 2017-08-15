@@ -25,8 +25,6 @@ public class StudentService {
 	}
 	
 	public void sortToHouse(House house){
-		//add this student to the house
-		house.addStudent(_student);
 		//set this student's house to the one given
 		_student.setHouse(house);
 	}

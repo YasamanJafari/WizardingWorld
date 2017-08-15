@@ -54,5 +54,11 @@ public class Main {
 		//Printing test result
 		System.out.println(studentServTest.setStudentTest());
 		System.out.println("----------------------------------------");
+		
+		//StudentService::sortToHouseTest
+		System.out.println("** STUDENT_SERVICE::sortToHouse TEST **");
+		//Printing test result
+		System.out.println(studentServTest.sortToHouseTest());
+		System.out.println("----------------------------------------");
 	}
 }
