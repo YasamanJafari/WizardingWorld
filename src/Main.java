@@ -47,5 +47,12 @@ public class Main {
 		//Printing test result
 		System.out.println(studentServTest.getStudentTest());
 		System.out.println("----------------------------------------");
+		
+		
+		//StudentService::setSchoolTest
+		System.out.println("** STUDENT_SERVICE::setStudent TEST **");
+		//Printing test result
+		System.out.println(studentServTest.setStudentTest());
+		System.out.println("----------------------------------------");
 	}
 }
