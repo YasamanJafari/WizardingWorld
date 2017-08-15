@@ -65,8 +65,6 @@ public class SchoolService {
 			 }
 		}
 		
-		System.out.println(score);
-		
 		//evaluating the result of the test
 		if(score > questions.size() && score < questions.size()*2 - 1){
 			finalHouse = new House("Slytherin", _school);

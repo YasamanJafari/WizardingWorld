@@ -1,6 +1,5 @@
 package serviceTest;
 
-import entities.House;
 import entities.School;
 import entities.Student;
 import service.SchoolService;
