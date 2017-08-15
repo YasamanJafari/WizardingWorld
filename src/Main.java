@@ -3,7 +3,7 @@ import serviceTest.*;
 public class Main {
 
 	public static void main(String[] args) {
-		//Creating an instance of courseService test in order to use the methods
+		//***Creating an instance of courseService test in order to use the methods
 		CourseServiceTest cstest = new CourseServiceTest();
 		
 		//CourseService::getCourseTest
@@ -15,6 +15,15 @@ public class Main {
 		System.out.println("** COURSE_SERVICE::setCourse TEST **");
 		//Printing test result
 		System.out.println(cstest.setCourseTest());
+		System.out.println("----------------------------------------");
+	
+		//***Creating an instance of schoolService test in order to use the methods
+		SchoolServiceTest sstest = new SchoolServiceTest();
+		
+		//SchoolService::getSchoolTest
+		System.out.println("** SCHOOL_SERVICE::getSchool TEST **");
+		//Printing test result
+		System.out.println(sstest.getSchoolTest());
 		System.out.println("----------------------------------------");
 	}
 }
