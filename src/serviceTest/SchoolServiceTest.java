@@ -15,4 +15,17 @@ public class SchoolServiceTest {
 			return true;
 		return false;
 	}
+	
+	public boolean setSchoolTest(){
+		School hogwarts = new School("Hogwarts");
+		School actual = hogwarts;
+		
+		SchoolService hogwartsService = new SchoolService();
+		hogwartsService.setSchool(hogwarts);
+		School expected = hogwartsService.getSchool();
+		
+		if(actual.equals(expected))
+			return true;
+		return false;
+	}
 }
