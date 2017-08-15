@@ -26,10 +26,26 @@ public class Main {
 		System.out.println(sstest.getSchoolTest());
 		System.out.println("----------------------------------------");
 		
+		//SchoolService::setSchoolTest
+		System.out.println("** SCHOOL_SERVICE::setSchool TEST **");
+		//Printing test result
+		System.out.println(sstest.setSchoolTest());
+		System.out.println("----------------------------------------");
+		
 		//SchoolService::sortingHat
 		System.out.println("** SCHOOL_SERVICE::sortingHat TEST **");
 		//Printing test result
 		System.out.println(sstest.sortingHatTest());
+		System.out.println("----------------------------------------");
+		
+		
+		//***Creating an instance of studentService test in order to use the methods
+		StudentServiceTest studentServTest = new StudentServiceTest();
+		
+		//StudentService::getSchoolTest
+		System.out.println("** STUDENT_SERVICE::getStudent TEST **");
+		//Printing test result
+		System.out.println(studentServTest.getStudentTest());
 		System.out.println("----------------------------------------");
 	}
 }
