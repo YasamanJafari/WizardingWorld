@@ -1,6 +1,8 @@
 package serviceTest;
 
+import entities.House;
 import entities.School;
+import entities.Student;
 import service.SchoolService;
 
 public class SchoolServiceTest {
@@ -28,4 +30,17 @@ public class SchoolServiceTest {
 			return true;
 		return false;
 	}
+	
+	public boolean sortingHatTest(){
+		Student harry = new Student("Harry Potter");
+		String actual = "Gryffindor";
+		
+		SchoolService hogwartsService = new SchoolService();
+		String expected = hogwartsService.sortingHat(harry).getName();
+		
+		if(actual.equals(expected))
+			return true;
+		return false;
+	}
+	
 }

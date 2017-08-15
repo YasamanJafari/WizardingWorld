@@ -1,5 +1,7 @@
 package service;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import entities.*;
@@ -44,7 +46,12 @@ public class SchoolService {
 		
 		for(int i = 0; i < questions.size(); i++){
 			System.out.println(questions.get(i));
-			 result = Integer.parseInt(System.console().readLine());
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+			try {
+				result = Integer.parseInt(br.readLine());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			 //check the validity of answer.
 			 if(result > 0 && result < 5)
 				 score += result;
@@ -57,6 +64,9 @@ public class SchoolService {
 				 continue;
 			 }
 		}
+		
+		System.out.println(score);
+		
 		//evaluating the result of the test
 		if(score > questions.size() && score < questions.size()*2 - 1){
 			finalHouse = new House("Slytherin", _school);

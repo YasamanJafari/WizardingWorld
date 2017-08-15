@@ -25,5 +25,11 @@ public class Main {
 		//Printing test result
 		System.out.println(sstest.getSchoolTest());
 		System.out.println("----------------------------------------");
+		
+		//SchoolService::sortingHat
+		System.out.println("** SCHOOL_SERVICE::sortingHat TEST **");
+		//Printing test result
+		System.out.println(sstest.sortingHatTest());
+		System.out.println("----------------------------------------");
 	}
 }
