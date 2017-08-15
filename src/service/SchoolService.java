@@ -30,7 +30,6 @@ public class SchoolService {
 	public House sortingHat(Student student){
 		int score = 0;
 		int result = 0;
-		House finalHouse = new House();
 		//Instruction on how to answer the questions.
 		System.out.println("Please answer the following questions(only enter the number of your answer.)");
 		//creating the question list in order to sort students in their appropriate houses.
@@ -65,23 +64,40 @@ public class SchoolService {
 			 }
 		}
 		
+
 		//evaluating the result of the test
 		if(score > questions.size() && score < questions.size()*2 - 1){
-			finalHouse = new House("Slytherin", _school);
+			for(int i = 0; i < _school.getHouses().size(); i++){
+				if(_school.getHouses().get(i).getName() == "Slytherin"){
+					return _school.getHouses().get(i);
+				}
+			}
 		}
 		
 		else if(score > questions.size()*2 - 2 && score < questions.size()*3 - 1){
-			finalHouse = new House("Ravenclaw", _school);
+			for(int i = 0; i < _school.getHouses().size(); i++){
+				if(_school.getHouses().get(i).getName() == "Ravenclaw"){
+					return _school.getHouses().get(i);
+				}
+			}
 		}
 		
 		else if(score > questions.size()*3 - 2 && score < questions.size()*4 - 1){
-			finalHouse = new House("Hufflepuff", _school);
+			for(int i = 0; i < _school.getHouses().size(); i++){
+				if(_school.getHouses().get(i).getName() == "Hufflepuff"){
+					return _school.getHouses().get(i);
+				}
+			}
 		}
 		
 		else{
-			finalHouse = new House("Gryffindor", _school);
+			for(int i = 0; i < _school.getHouses().size(); i++){
+				if(_school.getHouses().get(i).getName() == "Gryffindor"){
+					return _school.getHouses().get(i);
+				}
+			}
 		}
 		
-		return finalHouse;
+		return new House("Non-Hogwarts House");
 	}
 }

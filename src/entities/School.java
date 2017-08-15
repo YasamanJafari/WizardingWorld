@@ -15,7 +15,21 @@ public class School {
 	//constructors
 	public School(String name, ArrayList<House> houses, ArrayList<Course> courses, ArrayList<Integer> years, Vector<Student> students, Vector<Professor> professors){
 		_name = name;
-		_houses = houses;
+		if(houses == null){
+				//if the school does not have any houses, default values are given
+				House gryffindor = new House("Gryffindor");
+				House slytherin = new House("Slytherin");
+				House ravenclaw = new House("Ravenclaw");
+				House hufflepuff = new House("Hufflepuff");
+				
+				_houses = new ArrayList<House>();
+				_houses.add(gryffindor);
+				_houses.add(slytherin);
+				_houses.add(hufflepuff);
+				_houses.add(ravenclaw);
+		}
+		else
+			_houses = houses;
 		_courses = courses;
 		_years = years;
 		_students = students;

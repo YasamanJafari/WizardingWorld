@@ -85,4 +85,9 @@ public class House {
 		//set the field of prefects
 		_prefects = prefects;
 	}
+	
+	//add a new student to house 
+	public void addStudent(Student student){
+		_students.add(student);
+	}
 }
