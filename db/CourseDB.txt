@@ -15,7 +15,7 @@ Madame Hooche
 Draco Malfoy
 *
 Herbology
-C
+T
 Pomona Sprout
 1990
 3
@@ -24,7 +24,7 @@ Neville LongBottom
 Luna Lovegood
 *
 History of Magic
-B
+P
 Cuthbert Binns
 1994
 5
@@ -35,7 +35,7 @@ Cho Chang
 Ginny Weasley
 *
 Transfiguration
-C
+E
 Minerva McGonagall
 1956
 5
