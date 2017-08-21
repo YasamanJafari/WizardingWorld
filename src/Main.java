@@ -65,7 +65,11 @@ public class Main {
 		//SchoolTest::getData
 		SchoolService stg = new SchoolService();
 		stg.getData("SchoolDB.txt");
+		
+		//CourseTest::getData
+		CourseService ctg = new CourseService();
+		ctg.getData("CourseDB.txt");
 	
-		stg.setData("SchoolDB.txt");
+		//stg.setData("SchoolDB.txt");
 	}
 }
