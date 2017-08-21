@@ -64,7 +64,6 @@ public class StudentService {
 					if(studentNum != 0){
 						//add the last course to the vector of allCourses
 						_allStudents.add(newStudent);
-						//System.out.println("Name:" + newStudent.getName() + "year : " + newStudent.getBirthday() + " school :" + newStudent.getSchool().getName() + " house :" + newStudent.getHouse().getName() + "blood : " + newStudent.getBloodStatus());
 					}
 					newStudent = new Student();
 					continue;
@@ -75,6 +74,17 @@ public class StudentService {
 						//add the last course to the vector of allCourses
 						_allStudents.add(newStudent);
 					}
+					
+					for(int j = 0; j < _allStudents.size(); j++)
+					{
+						newStudent = _allStudents.get(j);
+						//TEST
+						System.out.println("** STUDENT_SERVICE::getData TEST **");
+						System.out.println(j+1 + "- " + "Name: " + newStudent.getName() + '\n' + "School: "+ newStudent.getSchool().getName() + '\n' + "House: " + newStudent.getHouse().getName() + '\n' + "Blood-Status: " + newStudent.getBloodStatus() + '\n' + "Birthday: " + newStudent.getBirthday());
+						System.out.println("----------------------------------------");
+					}
+					
+					
 					break;
 				}
 				//read name

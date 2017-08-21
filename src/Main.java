@@ -63,12 +63,16 @@ public class Main {
 		System.out.println("----------------------------------------");
 	
 		//SchoolTest::getData
-		SchoolService stg = new SchoolService();
-		stg.getData("SchoolDB.txt");
+		SchoolService schoolTG = new SchoolService();
+		schoolTG.getData("SchoolDB.txt");
 		
 		//CourseTest::getData
-		CourseService ctg = new CourseService();
-		ctg.getData("CourseDB.txt");
+		CourseService courseTG = new CourseService();
+		courseTG.getData("CourseDB.txt");
+		
+		//StudentTest::getData
+		StudentService studentTG = new StudentService();
+		studentTG.getData("StudentDB.txt");
 	
 		//stg.setData("SchoolDB.txt");
 	}
