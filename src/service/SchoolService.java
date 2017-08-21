@@ -141,7 +141,7 @@ public class SchoolService {
 					if(schoolCount != 0){
 						//add the last school to the vector of allSchools
 						allSchools.add(newSchool);
-						//System.out.println("Name:" + newSchool.getName() + "Students.count :" + newSchool.getStudents().size() + "Professor.count :" + newSchool.getProfessors().size());
+						System.out.println("Name:" + newSchool.getName() + " Students.count :" + newSchool.getStudents().size() + " Professor.count :" + newSchool.getProfessors().size() + "Houses.count" + newSchool.getHouses().size());
 					}
 					newSchool = new School();
 					lineNum++;
@@ -160,6 +160,9 @@ public class SchoolService {
 				{
 					newSchool.setName(line);
 					schoolCount++;
+					newSchool.setCourses(new ArrayList<Course>());
+					newSchool.setStudents(new Vector<Student>());
+					newSchool.setProfessors(new Vector<Professor>());
 				}
 				
 				//read houses
@@ -197,7 +200,7 @@ public class SchoolService {
 					lineNum += courseCount;
 				}
 				
-				else if(lineNum == 2 + houseCount + courseCount + 1 && !line.equals('0')){
+				else if(lineNum == 2 + houseCount + courseCount + 2 && !line.equals('0')){
 					Vector<Student> newStudents = new Vector<Student>();
 					//if houses exist, read them
 					try {
@@ -213,7 +216,7 @@ public class SchoolService {
 					lineNum += studentCount;
 				}
 				
-				else if(lineNum == 2 + houseCount + courseCount + studentCount + 1 && !line.equals('0')){
+				else if(lineNum == 2 + houseCount + courseCount + studentCount + 3 && !line.equals('0')){
 					Vector<Professor> newProfessors = new Vector<Professor>();
 					int professorCount = 0;
 					//if houses exist, read them
