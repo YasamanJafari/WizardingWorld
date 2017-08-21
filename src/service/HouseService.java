@@ -1,7 +1,10 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -95,6 +98,50 @@ public class HouseService {
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
+		}
+	}
+	
+	public void setData(String fileName){
+		try{
+		    File file = new File(fileName);
+
+		    // if file doesn't exists, then create it
+		    if (!file.exists()) {
+		        file.createNewFile();
+		    }
+
+		    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		    BufferedWriter bw = new BufferedWriter(fw);
+		    for(int i = 0; i < _allHouses.size(); i++)
+		    {
+		    	//name
+		    	bw.write(_allHouses.get(i).getName());
+		    	//go to the next line
+		    	bw.write('\n');
+		    	//school
+		    	bw.write(_allHouses.get(i).getSchool().getName());
+		    	bw.write('\n');
+		    	//students' count
+		    	bw.write(String.valueOf(_allHouses.get(i).getStudents().size()));
+		    	bw.write('\n');
+		    	//list students
+		    	for(int j = 0; j < _allHouses.get(i).getStudents().size(); j++){
+			    	bw.write(_allHouses.get(i).getStudents().get(j).getName());
+			    	bw.write('\n');
+		    	}
+		    	
+		    	if(i < _allHouses.size() - 1)
+		    	{
+		    		bw.write('*');
+		    		bw.write('\n');
+		    	}
+		    	else
+		    		bw.write('$');
+		    }
+		    bw.close();
+		    
+		}catch(IOException e){
+		    e.printStackTrace();
 		}
 	}
 }
