@@ -1,13 +1,17 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Vector;
 
 import entities.*;
 
 public class SchoolService {
 	private School _school;	//The school the services are performed on/at
+	private Vector<School> allSchools; //All the schools in the system
 	
 	//constructors
 	public SchoolService(School school){
@@ -99,5 +103,127 @@ public class SchoolService {
 		}
 		
 		return new House("Non-Hogwarts House");
+	}
+	
+	public void getData(String fileName){
+		BufferedReader br = null;
+		FileReader fr = null;
+		
+		try {
+
+			//br = new BufferedReader(new FileReader(fileName));
+			fr = new FileReader(fileName);
+			br = new BufferedReader(fr);
+
+			String line;
+			//the line number we are in while reading each school info
+			int lineNum = 0;
+			//number of houses(read at the second line of each school info)
+			int houseCount = 0;
+			//number of courses
+			int courseCount = 0;
+			//number of students
+			int studentCount = 0;
+			// each new school which is read from file is temporarily stored in newSchool
+			School newSchool = new School();
+			int schoolCount = 0;
+
+			//while there are lines, read them!
+			while ((line = br.readLine()) != null) {
+				// end of each school info is with "*"
+				if(line.equals("*")){
+					//indicates the beginning of a new school
+					lineNum = 0;
+					houseCount = 0;
+					courseCount = 0;
+					studentCount = 0;
+					if(schoolCount != 0){
+						//add the last school to the vector of allSchools
+						allSchools.add(newSchool);
+					}
+					newSchool = new School();
+				}
+				
+				else if(line.equals("$")){
+					if(schoolCount != 0){
+						//add the last school to the vector of allSchools
+						allSchools.add(newSchool);
+					}
+				}
+				
+				//read name
+				if(lineNum == 1)
+				{
+					newSchool.setName(line);
+					schoolCount++;
+				}
+				
+				//read houses
+				if(lineNum == 2 && !line.equals('0')){
+					ArrayList<House> newHouses = new ArrayList<House>();
+					//if houses exist, read them
+					houseCount = Integer.parseInt(line);
+					for(int i = 0; i < houseCount; i++){
+						House newHouse = new House(br.readLine());
+						newHouses.add(newHouse);
+					}
+					newSchool.setHouses(newHouses);
+					lineNum += houseCount;
+				}
+				
+				if(lineNum == 2 + houseCount + 1 && !line.equals('0')){
+					ArrayList<Course> newCourses = new ArrayList<Course>();
+					//if courses exist, read them
+				    courseCount = Integer.parseInt(line);
+					for(int i = 0; i < courseCount; i++){
+						Course newCourse = new Course(br.readLine());
+						newCourses.add(newCourse);
+					}
+					newSchool.setCourses(newCourses);
+					lineNum += courseCount;
+				}
+				
+				if(lineNum == 2 + houseCount + courseCount + 1 && !line.equals('0')){
+					Vector<Student> newStudents = new Vector<Student>();
+					//if houses exist, read them
+				    studentCount = Integer.parseInt(line);
+					for(int i = 0; i < studentCount; i++){
+						Student newStudent = new Student(br.readLine());
+						newStudents.add(newStudent);
+					}
+					newSchool.setStudents(newStudents);
+					lineNum += studentCount;
+				}
+				
+				if(lineNum == 2 + houseCount + courseCount + studentCount + 1 && !line.equals('0')){
+					Vector<Professor> newProfessors = new Vector<Professor>();
+					//if houses exist, read them
+				    int professorCount = Integer.parseInt(line);
+					for(int i = 0; i < professorCount; i++){
+						Professor newProfessor = new Professor(br.readLine());
+						newProfessors.add(newProfessor);
+					}
+					newSchool.setProfessors(newProfessors);
+					lineNum += studentCount;
+				}
+				
+				lineNum++;
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (br != null)
+					br.close();
+
+				if (fr != null)
+					fr.close();
+				
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
 	}
 }

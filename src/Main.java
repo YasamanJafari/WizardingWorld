@@ -60,5 +60,6 @@ public class Main {
 		//Printing test result
 		System.out.println(studentServTest.sortToHouseTest());
 		System.out.println("----------------------------------------");
+	
 	}
 }
