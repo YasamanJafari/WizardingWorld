@@ -62,9 +62,9 @@ public class Main {
 		System.out.println(studentServTest.sortToHouseTest());
 		System.out.println("----------------------------------------");
 	
-		SchoolService sss = new SchoolService();
-		sss.getData("SchoolDB.txt");
+		CourseService sss = new CourseService();
+		sss.getData("CourseDB.txt");
 	
-		sss.setData("SchoolDB.txt");
+		sss.setData("CourseDB.txt");
 	}
 }
