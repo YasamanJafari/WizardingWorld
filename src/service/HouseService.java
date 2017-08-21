@@ -37,7 +37,7 @@ public class HouseService {
 
 			String line;
 			// each new house which is read from file is temporarily stored in newCourse
-			House newHouse = new House();
+			_house = new House();
 			//the number of houses read
 			int houseNum = 0;
 
@@ -48,26 +48,26 @@ public class HouseService {
 					//indicates the beginning of a new course
 					if(houseNum != 0){
 						//add the last course to the vector of allCourses
-						_allHouses.add(newHouse);
+						_allHouses.add(_house);
 						//System.out.println("Name:" + newStudent.getName() + "year : " + newStudent.getBirthday() + " school :" + newStudent.getSchool().getName() + " house :" + newStudent.getHouse().getName() + "blood : " + newStudent.getBloodStatus());
 					}
 					newStudents = new Vector<Student>();
-					newHouse = new House();
+					_house = new House();
 					continue;
 				}
 				
 				else if(line.charAt(0) == '$'){
 					if(houseNum != 0){
 						//add the last course to the vector of allCourses
-						_allHouses.add(newHouse);
+						_allHouses.add(_house);
 					}
 					break;
 				}
 				//read name
-				newHouse.setName(line);
+				_house.setName(line);
 				houseNum++;
 				//read school
-				newHouse.setSchool(new School(br.readLine()));
+				_house.setSchool(new School(br.readLine()));
 				//read students' count
 				try {
 					studentCount = (Integer.parseInt(br.readLine()));
@@ -79,7 +79,7 @@ public class HouseService {
 					Student newStudent = new Student(br.readLine());
 					newStudents.add(newStudent);
 				}
-				newHouse.setStudents(newStudents);
+				_house.setStudents(newStudents);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

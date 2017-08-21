@@ -7,6 +7,7 @@ public class Person {
 	private BloodStatus _bloodStatus;
 	private School _school;
 	private String _birthday;
+	private String _role;
 	
 	//constructors
 	public Person(String name, House house, BloodStatus bloodStatus, School school, String birthday){
@@ -42,6 +43,9 @@ public class Person {
 	public String getBirthday(){
 		return _birthday;
 	}
+	public String getRole(){
+		return _role;
+	}
 	
 	//setters
 	public void setName(String name){
@@ -58,5 +62,9 @@ public class Person {
 	}
 	public void setBirthday(String birthday){
 		_birthday = birthday;
+	}
+	
+	public void setRole(String role){
+		_role = role;
 	}
 }
