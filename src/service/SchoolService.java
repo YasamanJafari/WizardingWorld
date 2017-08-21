@@ -144,7 +144,7 @@ public class SchoolService {
 					if(schoolCount != 0){
 						//add the last school to the vector of allSchools
 						allSchools.add(newSchool);
-						System.out.println("Name:" + newSchool.getName() + " Students.count :" + newSchool.getStudents().size() + " Professor.count :" + newSchool.getProfessors().size() + "Houses.count" + newSchool.getHouses().size());
+						//System.out.println("Name:" + newSchool.getName() + " Students.count :" + newSchool.getStudents().size() + " Professor.count :" + newSchool.getProfessors().size() + "Houses.count" + newSchool.getHouses().size());
 					}
 					newSchool = new School();
 					lineNum++;
