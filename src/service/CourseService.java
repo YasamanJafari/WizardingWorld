@@ -82,10 +82,10 @@ public class CourseService {
 						_allCourses.add(newCourse);
 					}
 					
+					//TEST
 					for(int j = 0; j < _allCourses.size(); j++)
 					{
 						newCourse = _allCourses.get(j);
-						//TEST
 						System.out.println("** COURSE_SERVICE::getData TEST **");
 						System.out.println(j+1 + "- " + "Name: " + newCourse.getName() + '\n' + "Min Grade: "+ newCourse.getMinGrade() + '\n' + "Professor: " + newCourse.getProfessor().getName() + '\n' + "year: " + newCourse.getYear());
 						System.out.println("Students count :" + newCourse.getStudents().size());
