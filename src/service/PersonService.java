@@ -60,6 +60,16 @@ public class PersonService {
 						//add the last course to the vector of allCourses
 						_allPersons.add(_person);
 					}
+					
+					//TEST
+					for(int j = 0; j < _allPersons.size(); j++)
+					{
+						_person = _allPersons.get(j);
+						System.out.println("** PERSON_SERVICE::getData TEST **");
+						System.out.println(j+1 + "- " + "Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
+						System.out.println("----------------------------------------");
+					}
+					
 					break;
 				}
 				//read name

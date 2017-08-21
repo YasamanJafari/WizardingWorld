@@ -77,6 +77,10 @@ public class Main {
 		//HouseTest::getData
 		HouseService houseTG = new HouseService();
 		houseTG.getData("HouseDB.txt");
+		
+		//PersonTest::getData
+		PersonService personTG = new PersonService();
+		personTG.getData("PersonDB.txt");
 	
 		//stg.setData("SchoolDB.txt");
 	}

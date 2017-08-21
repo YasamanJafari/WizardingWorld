@@ -75,10 +75,10 @@ public class StudentService {
 						_allStudents.add(newStudent);
 					}
 					
+					//TEST
 					for(int j = 0; j < _allStudents.size(); j++)
 					{
 						newStudent = _allStudents.get(j);
-						//TEST
 						System.out.println("** STUDENT_SERVICE::getData TEST **");
 						System.out.println(j+1 + "- " + "Name: " + newStudent.getName() + '\n' + "School: "+ newStudent.getSchool().getName() + '\n' + "House: " + newStudent.getHouse().getName() + '\n' + "Blood-Status: " + newStudent.getBloodStatus() + '\n' + "Birthday: " + newStudent.getBirthday());
 						System.out.println("----------------------------------------");
