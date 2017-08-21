@@ -1,30 +1,29 @@
 package entities;
-import java.util.*;
 
 public class Person {
 	//fields
 	private String _name;
 	private House _house;
 	private BloodStatus _bloodStatus;
-	private String _school;
-	private Date _birthday;
+	private School _school;
+	private String _birthday;
 	
 	//constructors
-	public Person(String name, House house, BloodStatus bloodStatus, String school, Date birthday){
+	public Person(String name, House house, BloodStatus bloodStatus, School school, String birthday){
 		_name = name;
 		_house = house;
 		_bloodStatus = bloodStatus;
 		_school = school;
 		_birthday = birthday;
 	}
-	public Person(String name, House house, BloodStatus bloodStatus, String school){
-		this(name, house, bloodStatus, school, null);
+	public Person(String name, House house, BloodStatus bloodStatus, School school){
+		this(name, house, bloodStatus, school, "");
 	}
 	public Person(String name){
-		this(name, null, null, "", null);
+		this(name, null, null, null, "");
 	}
 	public Person(){
-		this("", null, null, "", null);
+		this("", null, null, null, "");
 	}
 	
 	//getters
@@ -37,10 +36,10 @@ public class Person {
 	public BloodStatus getBloodStatus(){
 		return _bloodStatus;
 	}
-	public String getSchool(){
+	public School getSchool(){
 		return _school;
 	}
-	public Date getBirthday(){
+	public String getBirthday(){
 		return _birthday;
 	}
 	
@@ -54,10 +53,10 @@ public class Person {
 	public void setBloodStatus(BloodStatus bloodStatus){
 		_bloodStatus = bloodStatus;
 	}
-	public void setSchool(String school){
+	public void setSchool(School school){
 		_school = school;
 	}
-	public void setBirthday(Date birthday){
+	public void setBirthday(String birthday){
 		_birthday = birthday;
 	}
 }

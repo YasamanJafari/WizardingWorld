@@ -3,14 +3,11 @@ package service;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Vector;
 
 import entities.Course;
 import entities.Grades;
-import entities.House;
 import entities.Professor;
-import entities.School;
 import entities.Student;
 
 public class CourseService {
@@ -55,7 +52,7 @@ public class CourseService {
 
 			//while there are lines, read them!
 			while ((line = br.readLine()) != null && line.length() != 0) {
-				// end of each school info is with "*"
+				// end of each course info is with "*"
 				if(line.charAt(0) == '*'){
 					//indicates the beginning of a new course
 					if(courseNum != 0){
