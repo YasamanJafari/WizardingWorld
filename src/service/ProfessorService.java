@@ -1,7 +1,10 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -89,6 +92,52 @@ public class ProfessorService {
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
+		}
+	}
+	
+	public void setData(String fileName){
+		try{
+		    File file = new File(fileName);
+
+		    // if file doesn't exists, then create it
+		    if (!file.exists()) {
+		        file.createNewFile();
+		    }
+
+		    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		    BufferedWriter bw = new BufferedWriter(fw);
+		    for(int i = 0; i < _allProfessors.size(); i++)
+		    {
+		    	//name
+		    	bw.write(_allProfessors.get(i).getName());
+		    	//go to the next line
+		    	bw.write('\n');	
+		    	
+		        for (Map.Entry<Integer,Course> e : _allProfessors.get(i).getCourses().entrySet()) {
+		            Integer key = e.getKey();
+		            Course value = e.getValue();
+		                
+		            //course name
+				    bw.write(value.getName());
+				    bw.write('\n');
+				    	
+				    //year
+				    bw.write(String.valueOf(key));
+				    bw.write('\n');
+		        }
+		    	
+		    	if(i < _allProfessors.size() - 1)
+		    	{
+		    		bw.write('*');
+		    		bw.write('\n');
+		    	}
+		    	else
+		    		bw.write('$');
+		    }
+		    bw.close();
+		    
+		}catch(IOException e){
+		    e.printStackTrace();
 		}
 	}
 }
