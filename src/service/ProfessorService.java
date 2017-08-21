@@ -61,6 +61,21 @@ public class ProfessorService {
 						//add the last course to the vector of allCourses
 						_allProfessors.add(_professor);
 					}
+					
+					//TEST
+					for(int j = 0; j < _allProfessors.size(); j++)
+					{
+						_professor = _allProfessors.get(j);
+						System.out.println("** PROFESSOR_SERVICE::getData TEST **");
+						System.out.println(j+1 + "- " + "Name: " + _professor.getName());
+				        for (Map.Entry<Integer,Course> e : _professor.getCourses().entrySet()) {
+				            Integer key = e.getKey();
+				            Course value = e.getValue();
+				            System.out.println("Course: " + value.getName() + '\n' + "year: " + key);
+				        }
+						System.out.println("----------------------------------------");
+					}
+					
 					break;
 				}
 				//read name

@@ -81,6 +81,10 @@ public class Main {
 		//PersonTest::getData
 		PersonService personTG = new PersonService();
 		personTG.getData("PersonDB.txt");
+		
+		//ProfessorTest::getData
+		ProfessorService professorTG = new ProfessorService();
+		professorTG.getData("ProfessorDB.txt");
 	
 		//stg.setData("SchoolDB.txt");
 	}
