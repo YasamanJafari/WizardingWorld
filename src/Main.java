@@ -1,4 +1,4 @@
-import service.SchoolService;
+import service.*;
 import serviceTest.*;
 
 public class Main {
@@ -62,8 +62,8 @@ public class Main {
 		System.out.println(studentServTest.sortToHouseTest());
 		System.out.println("----------------------------------------");
 	
-		SchoolService sss = new SchoolService();
-		sss.getData("schoolDB.txt");
+		CourseService sss = new CourseService();
+		sss.getData("CourseDB.txt");
 	
 	}
 }

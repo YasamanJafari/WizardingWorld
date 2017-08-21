@@ -18,13 +18,13 @@ public class Course {
 		_students = students;
 	}
 	public Course(String name, Professor professor, Grades minGrade, int year){
-		this(name, professor, minGrade, year, null);
+		this(name, professor, minGrade, year, new Vector<Student>());
 	}
 	public Course(String name){
-		this(name, null, null, 0, null);
+		this(name, new Professor(), Grades.A, 0, new Vector<Student>());
 	}
 	public Course(){
-		this("", null, null, 0, null);
+		this("", new Professor(), Grades.A, 0, new Vector<Student>());
 	}
 	
 	//getters
@@ -48,7 +48,7 @@ public class Course {
 	public void setName(String name){
 		_name = name;
 	}
-	public void setProfessorName(Professor professor){
+	public void setProfessor(Professor professor){
 		_professor = professor;
 	}
 	public void setMinGrade(Grades minGrade){
@@ -57,7 +57,7 @@ public class Course {
 	public void setYear(int year){
 		_year = year;
 	}
-	public void setStudentNames(Vector<Student> students){
+	public void setStudents(Vector<Student> students){
 		_students = students;
 	}
 }
