@@ -1,9 +1,12 @@
 package service;
 
+import java.util.Vector;
+
 import entities.Course;
 
 public class CourseService {
 	private Course _course; 	//The course the services are performed on/at
+	private Vector<Course> allCourses;
 	
 	//constructors
 	public CourseService(Course course){

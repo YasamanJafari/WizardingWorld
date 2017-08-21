@@ -15,6 +15,7 @@ public class SchoolService {
 	
 	//constructors
 	public SchoolService(School school){
+		allSchools = new Vector<School>();
 		_school = school;
 	}
 	public SchoolService(){
@@ -117,7 +118,7 @@ public class SchoolService {
 
 			String line;
 			//the line number we are in while reading each school info
-			int lineNum = 0;
+			int lineNum = 1;
 			//number of houses(read at the second line of each school info)
 			int houseCount = 0;
 			//number of courses
@@ -129,9 +130,9 @@ public class SchoolService {
 			int schoolCount = 0;
 
 			//while there are lines, read them!
-			while ((line = br.readLine()) != null) {
+			while ((line = br.readLine()) != null && line.length() != 0) {
 				// end of each school info is with "*"
-				if(line.equals("*")){
+				if(line.charAt(0) == '*'){
 					//indicates the beginning of a new school
 					lineNum = 0;
 					houseCount = 0;
@@ -140,11 +141,14 @@ public class SchoolService {
 					if(schoolCount != 0){
 						//add the last school to the vector of allSchools
 						allSchools.add(newSchool);
+						//System.out.println("Name:" + newSchool.getName() + "Students.count :" + newSchool.getStudents().size() + "Professor.count :" + newSchool.getProfessors().size());
 					}
 					newSchool = new School();
+					lineNum++;
+					continue;
 				}
 				
-				else if(line.equals("$")){
+				else if(line.charAt(0) == '$'){
 					if(schoolCount != 0){
 						//add the last school to the vector of allSchools
 						allSchools.add(newSchool);
@@ -159,22 +163,32 @@ public class SchoolService {
 				}
 				
 				//read houses
-				if(lineNum == 2 && !line.equals('0')){
+				else if(lineNum == 2 && !line.equals('0')){
 					ArrayList<House> newHouses = new ArrayList<House>();
 					//if houses exist, read them
-					houseCount = Integer.parseInt(line);
+					try {
+						houseCount = Integer.parseInt(line);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					//System.out.println("houseCount: " + line);
 					for(int i = 0; i < houseCount; i++){
-						House newHouse = new House(br.readLine());
+						House newHouse = new House(br.readLine());					
+						//System.out.println("School: " + newSchool.getName() + "House " + i + " : " + newHouse.getName());
 						newHouses.add(newHouse);
 					}
 					newSchool.setHouses(newHouses);
 					lineNum += houseCount;
 				}
 				
-				if(lineNum == 2 + houseCount + 1 && !line.equals('0')){
+				else if(lineNum == 2 + houseCount + 1 && !line.equals('0')){
 					ArrayList<Course> newCourses = new ArrayList<Course>();
 					//if courses exist, read them
-				    courseCount = Integer.parseInt(line);
+					try {
+						courseCount = Integer.parseInt(line);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					for(int i = 0; i < courseCount; i++){
 						Course newCourse = new Course(br.readLine());
 						newCourses.add(newCourse);
@@ -183,10 +197,14 @@ public class SchoolService {
 					lineNum += courseCount;
 				}
 				
-				if(lineNum == 2 + houseCount + courseCount + 1 && !line.equals('0')){
+				else if(lineNum == 2 + houseCount + courseCount + 1 && !line.equals('0')){
 					Vector<Student> newStudents = new Vector<Student>();
 					//if houses exist, read them
-				    studentCount = Integer.parseInt(line);
+					try {
+						studentCount = Integer.parseInt(line);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					for(int i = 0; i < studentCount; i++){
 						Student newStudent = new Student(br.readLine());
 						newStudents.add(newStudent);
@@ -195,10 +213,15 @@ public class SchoolService {
 					lineNum += studentCount;
 				}
 				
-				if(lineNum == 2 + houseCount + courseCount + studentCount + 1 && !line.equals('0')){
+				else if(lineNum == 2 + houseCount + courseCount + studentCount + 1 && !line.equals('0')){
 					Vector<Professor> newProfessors = new Vector<Professor>();
+					int professorCount = 0;
 					//if houses exist, read them
-				    int professorCount = Integer.parseInt(line);
+					try {
+						professorCount = Integer.parseInt(line);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					for(int i = 0; i < professorCount; i++){
 						Professor newProfessor = new Professor(br.readLine());
 						newProfessors.add(newProfessor);
