@@ -144,7 +144,21 @@ public class SchoolService {
 					if(schoolCount != 0){
 						//add the last school to the vector of allSchools
 						allSchools.add(newSchool);
-						//System.out.println("Name:" + newSchool.getName() + " Students.count :" + newSchool.getStudents().size() + " Professor.count :" + newSchool.getProfessors().size() + "Houses.count" + newSchool.getHouses().size());
+						
+						System.out.println("** SCHOOLE_SERVICE::getData TEST **");
+						System.out.println(schoolCount + "- " + "Name: " + newSchool.getName() + '\n' + "Houses count: "+ newSchool.getHouses().size());
+						for(int i = 0; i < newSchool.getHouses().size(); i++){
+							System.out.println(newSchool.getHouses().get(i).getName());
+						}
+						System.out.println("Students count :" + newSchool.getStudents().size());
+						for(int i = 0; i < newSchool.getStudents().size(); i++){
+							System.out.println(newSchool.getStudents().get(i).getName());
+						}
+						System.out.println("Professors count :" + newSchool.getProfessors().size());
+						for(int i = 0; i < newSchool.getProfessors().size(); i++){
+							System.out.println(newSchool.getProfessors().get(i).getName());
+						}
+						System.out.println("----------------------------------------");
 					}
 					newSchool = new School();
 					lineNum++;
