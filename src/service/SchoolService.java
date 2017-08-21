@@ -1,7 +1,10 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -250,6 +253,65 @@ public class SchoolService {
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
+		}
+	}
+	
+	public void setData(String fileName){
+		try{
+		    File file = new File(fileName);
+
+		    // if file doesn't exists, then create it
+		    if (!file.exists()) {
+		        file.createNewFile();
+		    }
+
+		    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		    BufferedWriter bw = new BufferedWriter(fw);
+		    for(int i = 0; i < allSchools.size(); i++)
+		    {
+		    	bw.write(allSchools.get(i).getName());
+		    	//go to the next line
+		    	bw.write('\n');
+		    	bw.write(String.valueOf(allSchools.get(i).getHouses().size()));
+		    	bw.write('\n');
+		    	for(int j = 0; j < allSchools.get(i).getHouses().size(); j++){
+			    	bw.write(allSchools.get(i).getHouses().get(j).getName());
+			    	bw.write('\n');
+		    	}
+		    	
+		    	bw.write(String.valueOf(allSchools.get(i).getCourses().size()));
+		    	bw.write('\n');
+		    	for(int j = 0; j < allSchools.get(i).getCourses().size(); j++){
+			    	bw.write(allSchools.get(i).getCourses().get(j).getName());
+			    	bw.write('\n');
+		    	}
+		    	
+		    	bw.write(String.valueOf(allSchools.get(i).getStudents().size()));
+		    	bw.write('\n');
+		    	for(int j = 0; j < allSchools.get(i).getStudents().size(); j++){
+			    	bw.write(allSchools.get(i).getStudents().get(j).getName());
+			    	bw.write('\n');
+		    	}
+		    	
+		    	bw.write(String.valueOf(allSchools.get(i).getProfessors().size()));
+		    	bw.write('\n');
+		    	for(int j = 0; j < allSchools.get(i).getProfessors().size(); j++){
+			    	bw.write(allSchools.get(i).getProfessors().get(j).getName());
+			    	bw.write('\n');
+		    	}
+		    	
+		    	if(i < allSchools.size() - 1)
+		    	{
+		    		bw.write('*');
+		    		bw.write('\n');
+		    	}
+		    	else
+		    		bw.write('$');
+		    }
+		    bw.close();
+		    
+		}catch(IOException e){
+		    e.printStackTrace();
 		}
 	}
 }
