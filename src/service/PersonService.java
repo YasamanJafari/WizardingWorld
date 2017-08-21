@@ -1,7 +1,10 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -87,6 +90,54 @@ public class PersonService {
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
+		}
+	}
+	
+	public void setData(String fileName){
+		try{
+		    File file = new File(fileName);
+
+		    // if file doesn't exists, then create it
+		    if (!file.exists()) {
+		        file.createNewFile();
+		    }
+
+		    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		    BufferedWriter bw = new BufferedWriter(fw);
+		    for(int i = 0; i < _allPersons.size(); i++)
+		    {
+		    	//name
+		    	bw.write(_allPersons.get(i).getName());
+		    	//go to the next line
+		    	bw.write('\n');
+		    	//house
+		    	bw.write(_allPersons.get(i).getHouse().getName());
+		    	bw.write('\n');
+		    	//students' count
+		    	bw.write(String.valueOf(_allPersons.get(i).getBloodStatus()));
+		    	bw.write('\n');
+		    	//school
+		    	bw.write(_allPersons.get(i).getSchool().getName());
+		    	bw.write('\n');
+		    	//birthday
+		    	bw.write(_allPersons.get(i).getBirthday());
+		    	bw.write('\n');
+		    	//role
+		    	bw.write(_allPersons.get(i).getRole());
+		    	bw.write('\n');
+		    	
+		    	if(i < _allPersons.size() - 1)
+		    	{
+		    		bw.write('*');
+		    		bw.write('\n');
+		    	}
+		    	else
+		    		bw.write('$');
+		    }
+		    bw.close();
+		    
+		}catch(IOException e){
+		    e.printStackTrace();
 		}
 	}
 }
