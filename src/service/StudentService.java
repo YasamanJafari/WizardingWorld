@@ -48,7 +48,7 @@ public class StudentService {
 			br = new BufferedReader(fr);
 
 			String line;
-			// each new course which is read from file is temporarily stored in newCourse
+			// each new student which is read from file is temporarily stored in newCourse
 			Student newStudent = new Student();
 			//the number of students read
 			int studentNum = 0;

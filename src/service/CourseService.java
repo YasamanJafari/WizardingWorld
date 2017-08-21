@@ -96,6 +96,7 @@ public class CourseService {
 					Student newStudent = new Student(br.readLine());
 					newStudents.add(newStudent);
 				}
+				newCourse.setStudents(newStudents);
 			}
 
 		} catch (IOException e) {
