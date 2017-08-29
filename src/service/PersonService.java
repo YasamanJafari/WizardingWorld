@@ -192,6 +192,17 @@ public class PersonService {
 		this.setData("PersonDB.txt");
 	}
 	
+	//edit a specified person
+	public void editPerson(Person editedPerson, String currentName){
+		for(int i = 0; i < _allPersons.size(); i++){
+			if(_allPersons.get(i).getName().equals(currentName)){
+				this.deletePerson(_allPersons.get(i));
+				break;
+			}
+		}
+		this.createNewPerson(editedPerson);
+	}
+	
 	//delete the specified person
 	public void deletePerson(Person person){
 		for(int i = 0; i < _allPersons.size(); i++){
