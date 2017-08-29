@@ -132,5 +132,11 @@ public class Main {
 		//Printing test result
 		System.out.println(houseServiceTest.searchByNameTest());
 		System.out.println("----------------------------------------");
+		
+		//PersonServiceTest::showAllPersons
+		PersonServiceTest personServiceTest = new PersonServiceTest();		
+		System.out.println("** PERSON_SERVICE::showAllPersons TEST **");
+		//Printing test result
+		personServiceTest.showAllPersonsTest();
 	}
 }
