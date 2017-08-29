@@ -103,5 +103,10 @@ public class Main {
 		//Printing test result
 		System.out.println(houseServiceTest.getHouseByNameTest());
 		System.out.println("----------------------------------------");
+		
+		//HouseServiceTest::showAllHouses
+		System.out.println("** HOUSE_SERVICE::showAllHouses TEST **");
+		//Printing test result
+		houseServiceTest.showAllHousesTest();
 	}
 }

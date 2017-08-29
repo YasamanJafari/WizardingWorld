@@ -22,5 +22,13 @@ public class HouseServiceTest extends HouseService {
 			return false;
 		} 
 	}
+	
+	public void showAllHousesTest(){
+		
+		HouseService allHouseService = new HouseService();
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.showAllHouses();
+		
+	}
 
 }
