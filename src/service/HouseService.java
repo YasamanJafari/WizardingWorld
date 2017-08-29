@@ -203,4 +203,16 @@ public class HouseService {
 		//update dataBase
 		this.setData("HouseDB.txt");
 	}
+	
+	//delete the specified house
+	public void deleteHouse(House house){
+		this.getData("HouseDB.txt");
+		for(int i = 0; i < _allHouses.size(); i++){
+			if(house.equals(_allHouses.get(i))){
+				_allHouses.remove(i);
+				break;
+			}
+		}
+		this.setData("HouseDB.txt");
+	}
 }
