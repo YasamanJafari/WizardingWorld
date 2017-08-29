@@ -83,6 +83,8 @@ public class Main {
 		//PersonTest::getData
 		PersonService personTG = new PersonService();
 		personTG.getData("PersonDB.txt");
+		System.out.println("** PERSON_SERVICE::getData TEST **");
+		personTG.showAllPersons();
 		
 		//ProfessorTest::getData
 		ProfessorService professorTG = new ProfessorService();
