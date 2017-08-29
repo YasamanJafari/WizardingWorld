@@ -77,6 +77,7 @@ public class Main {
 		//HouseTest::getData
 		HouseService houseTG = new HouseService();
 		houseTG.getData("HouseDB.txt");
+		houseTG.showAllHousesInfo();
 		
 		//PersonTest::getData
 		PersonService personTG = new PersonService();
@@ -94,5 +95,12 @@ public class Main {
 		houseTG.setData("HouseDB.txt");
 		personTG.setData("PersonDB.txt");
 		professorTG.setData("ProfessorDB.txt");
+		
+		//HouseServiceTest::getHouseByName
+		HouseServiceTest houseServiceTest = new HouseServiceTest();
+		System.out.println("** HOUSE_SERVICE::getHouseByName TEST **");
+		//Printing test result
+		System.out.println(houseServiceTest.getHouseByNameTest());
+		System.out.println("----------------------------------------");
 	}
 }

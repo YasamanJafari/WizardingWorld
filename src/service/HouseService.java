@@ -64,19 +64,6 @@ public class HouseService {
 						//add the last course to the vector of allCourses
 						_allHouses.add(_house);
 						
-						//TEST
-						for(int j = 0; j < _allHouses.size(); j++)
-						{
-							_house = _allHouses.get(j);
-							System.out.println("** HOUSE_SERVICE::getData TEST **");
-							System.out.println(j+1 + "- " + "Name: " + _house.getName() + '\n' + "School: "+ _house.getSchool().getName());
-							System.out.println("Students count :" + _house.getStudents().size());
-							for(int i = 0; i < _house.getStudents().size(); i++){
-								System.out.println(_house.getStudents().get(i).getName());
-							}
-							System.out.println("----------------------------------------");
-						}
-						
 					}
 					break;
 				}
@@ -158,6 +145,22 @@ public class HouseService {
 		    e.printStackTrace();
 		}
 		
+	}
+	
+	public void showAllHousesInfo(){
+		
+		//TEST for getData
+		System.out.println("** HOUSE_SERVICE::getData TEST **");
+		for(int j = 0; j < _allHouses.size(); j++)
+		{
+			_house = _allHouses.get(j);
+			System.out.println(j+1 + "- " + "Name: " + _house.getName() + '\n' + "School: "+ _house.getSchool().getName());
+			System.out.println("Students count :" + _house.getStudents().size());
+			for(int i = 0; i < _house.getStudents().size(); i++){
+				System.out.println(_house.getStudents().get(i).getName());
+			}
+			System.out.println("----------------------------------------");
+		}
 	}
 	
 	public House getHouseByName(String name) throws Exception{
