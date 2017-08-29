@@ -28,6 +28,8 @@ public class HouseService {
 	public void getData(String fileName){
 		BufferedReader br = null;
 		FileReader fr = null;
+		
+		_allHouses = new Vector<House>();
 	
 		//num of students of a house
 		int studentCount = 0;
@@ -123,11 +125,17 @@ public class HouseService {
 		    	bw.write(_allHouses.get(i).getSchool().getName());
 		    	bw.write('\n');
 		    	//students' count
-		    	bw.write(String.valueOf(_allHouses.get(i).getStudents().size()));
-		    	bw.write('\n');
-		    	//list students
-		    	for(int j = 0; j < _allHouses.get(i).getStudents().size(); j++){
-			    	bw.write(_allHouses.get(i).getStudents().get(j).getName());
+		    	if(_allHouses.get(i).getStudents() != null){
+			    	bw.write(String.valueOf(_allHouses.get(i).getStudents().size()));
+			    	bw.write('\n');
+			    	//list students
+			    	for(int j = 0; j < _allHouses.get(i).getStudents().size(); j++){
+				    	bw.write(_allHouses.get(i).getStudents().get(j).getName());
+				    	bw.write('\n');
+			    	}
+		    	}
+		    	else{
+			    	bw.write('0');
 			    	bw.write('\n');
 		    	}
 		    	
@@ -153,7 +161,7 @@ public class HouseService {
 		for(int j = 0; j < _allHouses.size(); j++){
 			_house = _allHouses.get(j);
 			System.out.println(j+1 + "- " + "Name: " + _house.getName() + '\n' + "School: "+ _house.getSchool().getName());
-			System.out.println("Students count :" + _house.getStudents().size());
+			System.out.println("Students count: " + _house.getStudents().size());
 			for(int i = 0; i < _house.getStudents().size(); i++){
 				System.out.println(_house.getStudents().get(i).getName());
 			}
@@ -176,6 +184,7 @@ public class HouseService {
 	
 	//create the new house in both dataBase and systems
 	public void createNewHouse(House newHouse){
+		this.getData("HouseDB.txt");
 		//update system
 		_allHouses.add(newHouse);
 		//update dataBase

@@ -1,9 +1,10 @@
 package serviceTest;
 
 import entities.House;
+import entities.School;
 import service.HouseService;
 
-public class HouseServiceTest extends HouseService {
+public class HouseServiceTest {
 	
 	public boolean getHouseByNameTest(){
 		
@@ -24,11 +25,20 @@ public class HouseServiceTest extends HouseService {
 	}
 	
 	public void showAllHousesTest(){
-		
 		HouseService allHouseService = new HouseService();
 		allHouseService.getData("HouseDB.txt");
 		allHouseService.showAllHouses();
 		
 	}
 
+	public void createNewHouseTest(){
+		HouseService allHouseService = new HouseService();
+		House newHouse = new House("New House");
+		School newSchool = new School("New School");
+		newHouse.setSchool(newSchool);
+		allHouseService.createNewHouse(newHouse);
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.showAllHouses();
+	}
+	
 }
