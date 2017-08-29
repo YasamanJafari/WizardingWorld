@@ -155,6 +155,18 @@ public class PersonService {
 			System.out.println(j+1 + "- " + "Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
 			System.out.println("----------------------------------------");
 		}
-		
+	}
+	
+	//return the Person type of the given name
+	public Person getPersonByName(String name) throws Exception{
+		//search through all people
+		for(int i = 0; i < _allPersons.size(); i++){
+			//if the names are the same
+			if(_allPersons.get(i).getName().equals(name)){
+				return _allPersons.get(i);
+			}
+		}
+		//if person does not exist
+		throw new Exception("Person with the given name does not exist.");
 	}
 }
