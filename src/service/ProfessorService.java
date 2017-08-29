@@ -31,6 +31,8 @@ public class ProfessorService {
 		FileReader fr = null;
 		int year = 0;
 		
+		_allProfessors = new Vector<Professor>();
+		
 		try {
 			//br = new BufferedReader(new FileReader(fileName));
 			fr = new FileReader(fileName);

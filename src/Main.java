@@ -172,5 +172,11 @@ public class Main {
 		System.out.println("** PERSON_SERVICE::deletePerson TEST **");
 		//Printing test result
 		personServiceTest.deletePersonTest();
+		
+		//ProfessorServiceTest::showAllProfessors
+		ProfessorServiceTest professorServiceT = new ProfessorServiceTest();
+		System.out.println("** PROFESSOR_SERVICE::showAllProfessors TEST **");
+		//Printing test result
+		professorServiceT.showAllProfessorsTest();
 	}
 }
