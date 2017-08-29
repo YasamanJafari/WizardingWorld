@@ -1,5 +1,5 @@
-import service.*;
 import serviceTest.*;
+import service.*;
 
 public class Main {
 
@@ -33,11 +33,11 @@ public class Main {
 		System.out.println(sstest.setSchoolTest());
 		System.out.println("----------------------------------------");
 		
-		//SchoolService::sortingHat
-		System.out.println("** SCHOOL_SERVICE::sortingHat TEST **");
-		//Printing test result
-		System.out.println(sstest.sortingHatTest());
-		System.out.println("----------------------------------------");
+//		//SchoolService::sortingHat
+//		System.out.println("** SCHOOL_SERVICE::sortingHat TEST **");
+//		//Printing test result
+//		sstest.sortingHatTest();
+//		System.out.println("----------------------------------------");
 		
 		
 		//***Creating an instance of studentService test in order to use the methods
@@ -85,7 +85,14 @@ public class Main {
 		//ProfessorTest::getData
 		ProfessorService professorTG = new ProfessorService();
 		professorTG.getData("ProfessorDB.txt");
-	
-		//stg.setData("SchoolDB.txt");
+
+		
+		//You can test all setDatas by opening the file and seeing the content ^_^
+		schoolTG.setData("SchoolDB.txt");
+		courseTG.setData("CourseDB.txt");
+		studentTG.setData("StudentDB.txt");
+		houseTG.setData("HouseDB.txt");
+		personTG.setData("PersonDB.txt");
+		professorTG.setData("ProfessorDB.txt");
 	}
 }

@@ -30,17 +30,13 @@ public class SchoolServiceTest {
 		return false;
 	}
 	
-	public boolean sortingHatTest(){
+	public void sortingHatTest(){
 		Student harry = new Student("Harry Potter");
-		String expected = "Gryffindor";
 		School hogwarts = new School("Hogwarts");
 		
 		SchoolService hogwartsService = new SchoolService(hogwarts);
-		String actual = hogwartsService.sortingHat(harry).getName();
+		System.out.println(hogwartsService.sortingHat(harry).getName());
 		
-		if(actual.equals(expected))
-			return true;
-		return false;
 	}
 	
 }

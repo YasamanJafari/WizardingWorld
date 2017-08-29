@@ -157,5 +157,18 @@ public class HouseService {
 		}catch(IOException e){
 		    e.printStackTrace();
 		}
+		
+	}
+	
+	public House getHouseByName(String name) throws Exception{
+		//search through all houses
+		for(int i = 0; i < _allHouses.size(); i++){
+			//if the names are the same
+			if(_allHouses.get(i).getName().equals(name)){
+				return _allHouses.get(i);
+			}
+		}
+		//if houses does not exist
+		throw new Exception("House with the given name does not exist.");
 	}
 }
