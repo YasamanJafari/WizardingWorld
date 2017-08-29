@@ -138,5 +138,12 @@ public class Main {
 		System.out.println("** PERSON_SERVICE::showAllPersons TEST **");
 		//Printing test result
 		personServiceTest.showAllPersonsTest();
+
+		//PersonServiceTest::getPersonByName
+		PersonServiceTest personServiceT = new PersonServiceTest();
+		System.out.println("** Person_SERVICE::getPersonByName TEST **");
+		//Printing test result
+		System.out.println(personServiceT.getPersonByNameTest());
+		System.out.println("----------------------------------------");
 	}
 }
