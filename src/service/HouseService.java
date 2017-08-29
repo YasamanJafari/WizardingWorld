@@ -221,6 +221,17 @@ public class HouseService {
 		this.setData("HouseDB.txt");
 	}
 	
+	//edit a specified house
+	public void editHouse(House editedHouse, String currentName){
+		for(int i = 0; i < _allHouses.size(); i++){
+			if(_allHouses.get(i).getName().equals(currentName)){
+				this.deleteHouse(_allHouses.get(i));
+				break;
+			}
+		}
+		this.createNewHouse(editedHouse);
+	}
+	
 	//This method is like the showHouse method, but it only finds the house.
 	public House searchByName(String name) throws Exception{
 		for(int i = 0; i < _allHouses.size(); i++){

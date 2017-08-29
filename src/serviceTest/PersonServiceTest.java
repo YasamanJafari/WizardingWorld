@@ -4,7 +4,6 @@ import entities.BloodStatus;
 import entities.House;
 import entities.Person;
 import entities.School;
-import service.HouseService;
 import service.PersonService;
 
 public class PersonServiceTest {
