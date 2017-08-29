@@ -178,5 +178,11 @@ public class Main {
 		System.out.println("** PROFESSOR_SERVICE::showAllProfessors TEST **");
 		//Printing test result
 		professorServiceT.showAllProfessorsTest();
+		
+		//ProfessorServiceTest::getProfessorByName
+		System.out.println("** PROFESSOR_SERVICE::getProfessorByName TEST **");
+		//Printing test result
+		System.out.println(professorServiceT.getProfessorByNameTest());
+		System.out.println("----------------------------------------");
 	}
 }
