@@ -169,4 +169,15 @@ public class PersonService {
 		//if person does not exist
 		throw new Exception("Person with the given name does not exist.");
 	}
+	
+	//shows info of a person in the system, if does not exist, doesn't show anything
+	public void showPerson(String name){
+		for(int j = 0; j < _allPersons.size(); j++){
+			if(_allPersons.get(j).getName().equals(name)){
+				_person = _allPersons.get(j);
+				System.out.println(j+1 + "- " + "Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
+				System.out.println("----------------------------------------");
+			}
+		}
+	}
 }

@@ -187,6 +187,7 @@ public class HouseService {
 		throw new Exception("House with the given name does not exist.");
 	}
 	
+	//shows info of a house in the system, if does not exist, doesn't show anything
 	public void showHouse(String name){
 		for(int j = 0; j < _allHouses.size(); j++){
 			if(_allHouses.get(j).getName().equals(name)){
