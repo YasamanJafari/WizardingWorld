@@ -180,4 +180,13 @@ public class PersonService {
 			}
 		}
 	}
+	
+	//create the new person in both dataBase and systems
+	public void createNewPerson(Person newPerson){
+		this.getData("PersonDB.txt");
+		//update system
+		_allPersons.add(newPerson);
+		//update dataBase
+		this.setData("PersonDB.txt");
+	}
 }
