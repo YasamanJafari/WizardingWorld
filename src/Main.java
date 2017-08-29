@@ -124,5 +124,11 @@ public class Main {
 		System.out.println("** HOUSE_SERVICE::deleteHouse TEST **");
 		//Printing test result
 		houseServiceTest.deleteHouseTest();
+		
+		//HouseServiceTest::searchByName
+		System.out.println("** HOUSE_SERVICE::searchByName TEST **");
+		//Printing test result
+		System.out.println(houseServiceTest.searchByNameTest());
+		System.out.println("----------------------------------------");
 	}
 }

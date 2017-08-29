@@ -219,4 +219,16 @@ public class HouseService {
 		}
 		this.setData("HouseDB.txt");
 	}
+	
+	//This method is like the showHouse method, but it only finds the house.
+	public House searchByName(String name) throws Exception{
+		for(int i = 0; i < _allHouses.size(); i++){
+			//if the names are the same
+			if(_allHouses.get(i).getName().equals(name)){
+				return _allHouses.get(i);
+			}
+		}
+		//if houses does not exist
+		throw new Exception("House with the given name does not exist.");
+	}
 }
