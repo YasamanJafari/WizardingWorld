@@ -155,5 +155,6 @@ public class PersonService {
 			System.out.println(j+1 + "- " + "Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
 			System.out.println("----------------------------------------");
 		}
+		
 	}
 }
