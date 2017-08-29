@@ -32,11 +32,4 @@ PURE_BLOOD
 Hogwarts
 22/08/1973
 Student
-*
-New Person
-New House
-HALF_BLOOD
-New School
-01/01/1980
-Student
 $

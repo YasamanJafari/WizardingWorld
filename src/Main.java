@@ -155,5 +155,10 @@ public class Main {
 		System.out.println("** PERSON_SERVICE::createNewPerson TEST **");
 		//Printing test result
 		personServiceTest.createNewPersonTest();
+		
+		//PersonServiceTest::deletePerson
+		System.out.println("** PERSON_SERVICE::deletePerson TEST **");
+		//Printing test result
+		personServiceTest.deletePersonTest();
 	}
 }

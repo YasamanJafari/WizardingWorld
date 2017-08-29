@@ -35,6 +35,8 @@ public class PersonService {
 		BufferedReader br = null;
 		FileReader fr = null;
 		
+		_allPersons = new Vector<Person>();
+		
 		try {
 			//br = new BufferedReader(new FileReader(fileName));
 			fr = new FileReader(fileName);
@@ -187,6 +189,17 @@ public class PersonService {
 		//update system
 		_allPersons.add(newPerson);
 		//update dataBase
+		this.setData("PersonDB.txt");
+	}
+	
+	//delete the specified person
+	public void deletePerson(Person person){
+		for(int i = 0; i < _allPersons.size(); i++){
+			if(person.equals(_allPersons.get(i))){
+				_allPersons.remove(i);
+				break;
+			}
+		}
 		this.setData("PersonDB.txt");
 	}
 }

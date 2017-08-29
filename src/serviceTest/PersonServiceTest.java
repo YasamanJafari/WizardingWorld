@@ -4,6 +4,7 @@ import entities.BloodStatus;
 import entities.House;
 import entities.Person;
 import entities.School;
+import service.HouseService;
 import service.PersonService;
 
 public class PersonServiceTest {
@@ -46,4 +47,11 @@ public class PersonServiceTest {
 		allPersonService.showAllPersons();
 	}
 	
+	public void deletePersonTest(){
+		PersonService allPersonService = new PersonService();
+		allPersonService.getData("PersonDB.txt");
+		allPersonService.deletePerson(allPersonService.getAllPersons().get(allPersonService.getAllPersons().size() - 1));
+		allPersonService.getData("PersonDB.txt");
+		allPersonService.showAllPersons();
+	}
 }
