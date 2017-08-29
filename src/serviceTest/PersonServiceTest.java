@@ -46,6 +46,19 @@ public class PersonServiceTest {
 		allPersonService.showAllPersons();
 	}
 	
+	public void editPersonTest(){
+		PersonService allPersonService = new PersonService();
+		allPersonService.getData("PersonDB.txt");
+		
+		//edited person
+		Person edittedPerson = new Person("Editted Person", new House("Editted House"), BloodStatus.HALF_BLOOD, new School("Editted School"), "01/01/1980");
+		edittedPerson.setRole("Student");
+		
+		allPersonService.editPerson(edittedPerson, "New Person");
+		allPersonService.getData("PersonDB.txt");
+		allPersonService.showAllPersons();
+	}
+	
 	public void deletePersonTest(){
 		PersonService allPersonService = new PersonService();
 		allPersonService.getData("PersonDB.txt");

@@ -161,6 +161,11 @@ public class Main {
 		//Printing test result
 		personServiceTest.createNewPersonTest();
 		
+		//PersonServiceTest::editPerson
+		System.out.println("** PERSON_SERVICE::editPerson TEST **");
+		//Printing test result
+		personServiceTest.editPersonTest();
+		
 		//PersonServiceTest::deletePerson
 		System.out.println("** PERSON_SERVICE::deletePerson TEST **");
 		//Printing test result
