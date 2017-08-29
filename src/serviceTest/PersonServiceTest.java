@@ -1,6 +1,9 @@
 package serviceTest;
 
+import entities.BloodStatus;
+import entities.House;
 import entities.Person;
+import entities.School;
 import service.PersonService;
 
 public class PersonServiceTest {
@@ -32,6 +35,15 @@ public class PersonServiceTest {
 		PersonService allPeopleService = new PersonService();
 		allPeopleService.getData("PersonDB.txt");
 		allPeopleService.showPerson("Percy Weasley");
+	}
+	
+	public void createNewPersonTest(){
+		PersonService allPersonService = new PersonService();
+		Person newPerson = new Person("New Person", new House("New House"), BloodStatus.HALF_BLOOD, new School("New School"), "01/01/1980");
+		newPerson.setRole("Student");
+		allPersonService.createNewPerson(newPerson);
+		allPersonService.getData("PersonDB.txt");
+		allPersonService.showAllPersons();
 	}
 	
 }
