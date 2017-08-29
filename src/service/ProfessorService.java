@@ -158,4 +158,17 @@ public class ProfessorService {
 			System.out.println("----------------------------------------");
 		}
 	}
+	
+	//return the Professor type of the given name
+	public Professor getProfessorByName(String name) throws Exception{
+		//search through all professors
+		for(int i = 0; i < _allProfessors.size(); i++){
+			//if the names are the same
+			if(_allProfessors.get(i).getName().equals(name)){
+				return _allProfessors.get(i);
+			}
+		}
+		//if professor does not exist
+		throw new Exception("Professor with the given name does not exist.");
+	}
 }
