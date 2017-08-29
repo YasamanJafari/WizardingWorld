@@ -77,7 +77,8 @@ public class Main {
 		//HouseTest::getData
 		HouseService houseTG = new HouseService();
 		houseTG.getData("HouseDB.txt");
-		houseTG.showAllHousesInfo();
+		System.out.println("** HOUSE_SERVICE::getData TEST **");
+		houseTG.showAllHouses();
 		
 		//PersonTest::getData
 		PersonService personTG = new PersonService();

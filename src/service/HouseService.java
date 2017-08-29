@@ -147,12 +147,10 @@ public class HouseService {
 		
 	}
 	
-	public void showAllHousesInfo(){
+	//shows all Houses in the system
+	public void showAllHouses(){
 		
-		//TEST for getData
-		System.out.println("** HOUSE_SERVICE::getData TEST **");
-		for(int j = 0; j < _allHouses.size(); j++)
-		{
+		for(int j = 0; j < _allHouses.size(); j++){
 			_house = _allHouses.get(j);
 			System.out.println(j+1 + "- " + "Name: " + _house.getName() + '\n' + "School: "+ _house.getSchool().getName());
 			System.out.println("Students count :" + _house.getStudents().size());
@@ -163,6 +161,7 @@ public class HouseService {
 		}
 	}
 	
+	//return the House type of the given name
 	public House getHouseByName(String name) throws Exception{
 		//search through all houses
 		for(int i = 0; i < _allHouses.size(); i++){
