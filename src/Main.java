@@ -88,7 +88,9 @@ public class Main {
 		
 		//ProfessorTest::getData
 		ProfessorService professorTG = new ProfessorService();
+		System.out.println("** PROFESSOR_SERVICE::getData TEST **");
 		professorTG.getData("ProfessorDB.txt");
+		professorTG.showAllProfessors();
 
 		
 		//You can test all setDatas by opening the file and seeing the content ^_^

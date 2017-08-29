@@ -62,20 +62,6 @@ public class ProfessorService {
 						_allProfessors.add(_professor);
 					}
 					
-					//TEST
-					for(int j = 0; j < _allProfessors.size(); j++)
-					{
-						_professor = _allProfessors.get(j);
-						System.out.println("** PROFESSOR_SERVICE::getData TEST **");
-						System.out.println(j+1 + "- " + "Name: " + _professor.getName());
-				        for (Map.Entry<Integer,Course> e : _professor.getCourses().entrySet()) {
-				            Integer key = e.getKey();
-				            Course value = e.getValue();
-				            System.out.println("Course: " + value.getName() + '\n' + "year: " + key);
-				        }
-						System.out.println("----------------------------------------");
-					}
-					
 					break;
 				}
 				//read name
@@ -153,6 +139,21 @@ public class ProfessorService {
 		    
 		}catch(IOException e){
 		    e.printStackTrace();
+		}
+	}
+	
+	//shows all professors in the system
+	public void showAllProfessors(){
+		for(int j = 0; j < _allProfessors.size(); j++)
+		{
+			_professor = _allProfessors.get(j);
+			System.out.println(j+1 + "- " + "Name: " + _professor.getName());
+	        for (Map.Entry<Integer,Course> e : _professor.getCourses().entrySet()) {
+	            Integer key = e.getKey();
+	            Course value = e.getValue();
+	            System.out.println("Course: " + value.getName() + '\n' + "year: " + key);
+	        }
+			System.out.println("----------------------------------------");
 		}
 	}
 }
