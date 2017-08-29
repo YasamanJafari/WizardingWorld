@@ -173,4 +173,12 @@ public class HouseService {
 		//if houses does not exist
 		throw new Exception("House with the given name does not exist.");
 	}
+	
+	//create the new house in both dataBase and systems
+	public void createNewHouse(House newHouse){
+		//update system
+		_allHouses.add(newHouse);
+		//update dataBase
+		this.setData("HouseDB.txt");
+	}
 }
