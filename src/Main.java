@@ -109,9 +109,15 @@ public class Main {
 		//Printing test result
 		houseServiceTest.showAllHousesTest();
 		
-		//HouseServiceTest::createNewHouse
-		System.out.println("** HOUSE_SERVICE::createNewHouse TEST **");
+		//HouseServiceTest::showHouse
+		System.out.println("** HOUSE_SERVICE::showHouse TEST **");
 		//Printing test result
-		houseServiceTest.createNewHouseTest();
+		houseServiceTest.showHouseTest();
+		System.out.println("----------------------------------------");
+		
+		//HouseServiceTest::createNewHouse
+		//System.out.println("** HOUSE_SERVICE::createNewHouse TEST **");
+		//Printing test result
+		//houseServiceTest.createNewHouseTest();
 	}
 }

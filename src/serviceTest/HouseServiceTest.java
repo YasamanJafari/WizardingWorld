@@ -28,7 +28,12 @@ public class HouseServiceTest {
 		HouseService allHouseService = new HouseService();
 		allHouseService.getData("HouseDB.txt");
 		allHouseService.showAllHouses();
-		
+	}
+	
+	public void showHouseTest(){
+		HouseService allHouseService = new HouseService();
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.showHouse("Gryffindor");
 	}
 
 	public void createNewHouseTest(){

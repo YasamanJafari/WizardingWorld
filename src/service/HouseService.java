@@ -182,6 +182,19 @@ public class HouseService {
 		throw new Exception("House with the given name does not exist.");
 	}
 	
+	public void showHouse(String name){
+		for(int j = 0; j < _allHouses.size(); j++){
+			if(_allHouses.get(j).getName().equals(name)){
+				_house = _allHouses.get(j);
+				System.out.println("Name: " + _house.getName() + '\n' + "School: "+ _house.getSchool().getName());
+				System.out.println("Students count: " + _house.getStudents().size());
+				for(int i = 0; i < _house.getStudents().size(); i++){
+					System.out.println(_house.getStudents().get(i).getName());
+				}
+			}
+		}
+	}
+	
 	//create the new house in both dataBase and systems
 	public void createNewHouse(House newHouse){
 		this.getData("HouseDB.txt");
