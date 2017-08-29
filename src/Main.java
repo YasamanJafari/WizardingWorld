@@ -116,8 +116,13 @@ public class Main {
 		System.out.println("----------------------------------------");
 		
 		//HouseServiceTest::createNewHouse
-		//System.out.println("** HOUSE_SERVICE::createNewHouse TEST **");
+		System.out.println("** HOUSE_SERVICE::createNewHouse TEST **");
 		//Printing test result
-		//houseServiceTest.createNewHouseTest();
+		houseServiceTest.createNewHouseTest();
+		
+		//HouseServiceTest::deleteHouse
+		System.out.println("** HOUSE_SERVICE::deleteHouse TEST **");
+		//Printing test result
+		houseServiceTest.deleteHouseTest();
 	}
 }

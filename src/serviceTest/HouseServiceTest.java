@@ -46,4 +46,11 @@ public class HouseServiceTest {
 		allHouseService.showAllHouses();
 	}
 	
+	public void deleteHouseTest(){
+		HouseService allHouseService = new HouseService();
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.deleteHouse(allHouseService.getAllHouses().get(allHouseService.getAllHouses().size() - 1));
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.showAllHouses();
+	}
 }

@@ -25,6 +25,11 @@ public class HouseService {
 		this(null);
 	}
 	
+	//getter
+	public Vector<House> getAllHouses(){
+		return _allHouses;
+	}
+	
 	public void getData(String fileName){
 		BufferedReader br = null;
 		FileReader fr = null;
@@ -206,7 +211,6 @@ public class HouseService {
 	
 	//delete the specified house
 	public void deleteHouse(House house){
-		this.getData("HouseDB.txt");
 		for(int i = 0; i < _allHouses.size(); i++){
 			if(house.equals(_allHouses.get(i))){
 				_allHouses.remove(i);
