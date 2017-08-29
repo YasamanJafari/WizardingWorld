@@ -175,7 +175,7 @@ public class PersonService {
 		for(int j = 0; j < _allPersons.size(); j++){
 			if(_allPersons.get(j).getName().equals(name)){
 				_person = _allPersons.get(j);
-				System.out.println(j+1 + "- " + "Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
+				System.out.println("Name: " + _person.getName() + '\n' + "House: "+ _person.getHouse().getName() + '\n' + "Blood-Status: " + _person.getBloodStatus() + '\n' + "School: " + _person.getSchool().getName() + '\n' + "Birthday: " + _person.getBirthday() + '\n' + "Role: " + _person.getRole());
 				System.out.println("----------------------------------------");
 			}
 		}

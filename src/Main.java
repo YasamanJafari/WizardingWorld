@@ -145,5 +145,10 @@ public class Main {
 		//Printing test result
 		System.out.println(personServiceT.getPersonByNameTest());
 		System.out.println("----------------------------------------");
+		
+		//PersonServiceTest::showPerson
+		System.out.println("** PERSON_SERVICE::showPerson TEST **");
+		//Printing test result
+		personServiceTest.showPersonTest();
 	}
 }

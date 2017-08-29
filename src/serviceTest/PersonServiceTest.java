@@ -28,5 +28,10 @@ public class PersonServiceTest {
 		} 
 	}
 	
+	public void showPersonTest(){
+		PersonService allPeopleService = new PersonService();
+		allPeopleService.getData("PersonDB.txt");
+		allPeopleService.showPerson("Percy Weasley");
+	}
 	
 }
