@@ -53,6 +53,20 @@ public class HouseServiceTest {
 		allHouseService.showAllHouses();
 	}
 	
+	public void editHouseTest(){
+		HouseService allHouseService = new HouseService();
+		allHouseService.getData("HouseDB.txt");
+		
+		//edited house
+		House edittedHouse = new House("Editted House");
+		School edittedSchool = new School("Editted School");
+		edittedHouse.setSchool(edittedSchool);
+		
+		allHouseService.editHouse(edittedHouse, "New House");
+		allHouseService.getData("HouseDB.txt");
+		allHouseService.showAllHouses();
+	}
+	
 	public boolean searchByNameTest(){
 		HouseService gryffindorService = new HouseService();
 		gryffindorService.getData("HouseDB.txt");

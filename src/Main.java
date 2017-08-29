@@ -122,6 +122,11 @@ public class Main {
 		//Printing test result
 		houseServiceTest.createNewHouseTest();
 		
+		//HouseServiceTest::editHouse
+		System.out.println("** HOUSE_SERVICE::editHouse TEST **");
+		//Printing test result
+		houseServiceTest.editHouseTest();
+		
 		//HouseServiceTest::deleteHouse
 		System.out.println("** HOUSE_SERVICE::deleteHouse TEST **");
 		//Printing test result
